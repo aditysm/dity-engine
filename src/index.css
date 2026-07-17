@@ -45,7 +45,7 @@
 
 @layer base {
   html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
   }
 
   :root {
@@ -174,4 +174,14 @@
 
 .text-shadow-glow {
   text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }

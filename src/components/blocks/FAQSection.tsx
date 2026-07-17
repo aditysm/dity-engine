@@ -29,7 +29,7 @@ export function FAQSection() {
             <div className="mx-auto max-w-5xl px-6">
                 <div className="flex flex-col items-start text-left mb-16">
                     <h2 className="text-2xl md:text-4xl font-bold tracking-tight mb-4">
-                        Pertanyaan <span className="text-primary italic">Sering</span> Diajukan
+                        FAQ (Yang <span className="text-primary italic">Sering</span> Ditanyakan)
                     </h2>
                     <p className="text-muted-foreground text-base md:text-lg max-w-2xl">
                         Segala hal yang perlu Anda ketahui tentang bagaimana Dity Engine mempercepat alur kerja pengembangan Anda.

@@ -32,16 +32,16 @@ const microTools = [
 
 export function Features() {
     return (
-        <section id="features" className="bg-background">
+        <section id="about" className="bg-background">
             <div className="mx-auto max-w-5xl px-6 py-24 md:py-32">
-                <div className="relative z-10 grid items-start gap-8 md:grid-cols-2 md:gap-12 mb-16">
+                <div className="relative z-10 flex flex-col md:flex-row md:items-end justify-between gap-2 md:gap-12 mb-16">
                     <motion.h2 
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         className="text-2xl md:text-4xl font-bold tracking-tight leading-tight break-words"
                     >
-                        Ekosistem Kerja untuk <span className="text-primary italic">Vibe Coder</span>
+                        Ekosistem Kerja <span className="text-primary italic">Vibe Coder</span>
                     </motion.h2>
                     <motion.p 
                         initial={{ opacity: 0, x: 20 }}
@@ -65,7 +65,7 @@ export function Features() {
                             <div className="bg-background/40 backdrop-blur-md border border-white/10 rounded-xl p-4 md:p-6 max-w-md text-center">
                                 <Terminal className="mx-auto mb-3 md:mb-4 text-primary" size={24} />
                                 <h3 className="text-lg md:text-xl font-bold mb-2">Control Center Masa Depan</h3>
-                                <p className="text-xs md:text-sm text-on-surface-variant">Setup file .cursorrules & .clinerules dalam hitungan detik untuk asisten AI editor Anda.</p>
+                                <p className="text-xs md:text-sm text-on-surface-variant">Konfigurasi instruksi asisten AI editor dalam hitungan detik untuk alur kerja yang lebih cerdas.</p>
                             </div>
                         </div>
                     </div>

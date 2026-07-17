@@ -48,15 +48,15 @@ export function Footer({
     },
   ],
   mainLinks = [
-    { href: "#tools", label: "Local Context Packer", active: true },
-    { href: "#tools", label: "Smart Boilerplate", active: true },
-    { href: "#tools", label: "Token Cost Tracker", active: true },
-    { href: "#tools", label: "PRD Architect", active: true },
+    { href: "/local-context-packer", label: "Local Context Packer", active: true },
+    { href: "/smart-boilerplate", label: "Smart Boilerplate", active: true },
+    { href: "/token-cost-tracker", label: "Token Cost Tracker", active: true },
+    { href: "/prd-architect", label: "PRD Architect", active: true },
   ],
   legalLinks = [
-    { href: "#", label: "Kebijakan Privasi" },
-    { href: "#", label: "Syarat & Ketentuan" },
-    { href: "#", label: "Pusat Bantuan" },
+    { href: "/privacy", label: "Kebijakan Privasi" },
+    { href: "/terms", label: "Syarat & Ketentuan" },
+    { href: "/support", label: "Pusat Bantuan" },
   ],
   copyright = {
     text: "© 2026 Dity Engine. Hak cipta dilindungi.",
@@ -104,12 +104,12 @@ export function Footer({
                           {link.label}
                         </span>
                       ) : (
-                        <a
-                          href={link.href}
+                        <Link
+                          to={link.href}
                           className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
                         >
                           {link.label}
-                        </a>
+                        </Link>
                       )}
                     </li>
                   ))}

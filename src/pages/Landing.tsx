@@ -11,10 +11,15 @@ export function Landing() {
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col">
       <HeroSection />
+      <div className="h-px w-full bg-border/40" />
       <Features />
+      <div className="h-px w-full bg-border/40" />
       <HorizontalTools />
+      <div className="h-px w-full bg-border/40" />
       <FAQSection />
+      <div className="h-px w-full bg-border/40" />
       <CTASection />
+      <div className="h-px w-full bg-border/40" />
 
       <Footer
         logo={<Logo className="h-10 w-10 text-primary" />}

@@ -19,19 +19,24 @@ export function CTASection() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="relative rounded-3xl border border-border/50 backdrop-blur-sm bg-card/50 p-8 md:p-16 text-left shadow-2xl overflow-hidden"
+                    className="relative rounded-[2.5rem] border border-border/50 bg-card p-8 md:p-20 text-left shadow-2xl overflow-hidden group"
                 >
+                    {/* Unique Background Overlay */}
+                    <div className="absolute inset-0 bg-primary/[0.02] dark:bg-primary/[0.05] pointer-events-none" />
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(var(--primary-rgb),0.05),transparent_50%)] opacity-50 dark:opacity-100" />
+                    <div className="absolute top-0 right-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-[0.02] dark:opacity-[0.1] mix-blend-overlay dark:mix-blend-normal" />
+                    
                     {/* Decorative Blobs */}
-                    <div className="absolute -top-24 -right-24 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
-                    <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-pulse delay-700"></div>
+                    <div className="absolute -top-32 -right-32 w-96 h-96 bg-primary/5 dark:bg-primary/10 rounded-full blur-[100px] group-hover:scale-110 transition-transform duration-1000" />
+                    <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-blue-500/5 rounded-full blur-[100px] group-hover:scale-110 transition-transform duration-1000 delay-150" />
 
                     <div className="relative z-10 space-y-8">
                         <h2 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight max-w-3xl">
-                            Ubah Ide Anda Menjadi <span className="text-primary italic">Kode Produksi</span> Sekarang
+                            Dari Ide Acak Jadi <span className="text-primary italic">Kode Siap Pakai</span>
                         </h2>
                         
                         <p className="text-lg text-muted-foreground max-w-xl leading-relaxed">
-                            Bergabunglah dengan para pengembang modern yang telah mempercepat alur kerja mereka dengan Dity Engine. 100% lokal, aman, dan tanpa batas.
+                            Bergabunglah dengan developer modern yang berhasil menghemat ratusan jam kerja dengan Dity Engine.
                         </p>
                         
                         <div className="flex flex-col sm:flex-row items-center justify-start gap-4 pt-4">
@@ -40,7 +45,7 @@ export function CTASection() {
                                 size="lg"
                                 className="rounded-xl px-10 h-14 text-lg font-bold shadow-xl shadow-primary/20 hover:scale-105 transition-transform w-full sm:w-auto"
                             >
-                                Mulai Gratis
+                                Unduh Sekarang
                                 <ArrowRight className="ml-2 h-5 w-5" />
                             </Button>
                             <Button
