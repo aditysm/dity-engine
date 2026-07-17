@@ -38,7 +38,7 @@ export function Footer({
     },
     {
       icon: <FaInstagram className="h-5 w-5" />,
-      href: "https://www.instagram.com/adity_ptra",
+      href: "https://www.instagram.com/dity.storee",
       label: "Instagram",
     },
     {
@@ -57,6 +57,7 @@ export function Footer({
     { href: "/privacy", label: "Kebijakan Privasi" },
     { href: "/terms", label: "Syarat & Ketentuan" },
     { href: "/support", label: "Pusat Bantuan" },
+    { href: "/docs", label: "Dokumentasi" },
   ],
   copyright = {
     text: "© 2026 Dity Engine. Hak cipta dilindungi.",

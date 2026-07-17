@@ -3,6 +3,7 @@ import { PageLayout } from '../components/layout/PageLayout';
 import { Button } from '../components/ui/button';
 import { Download, Monitor, Laptop, Globe, ArrowRight, Shield, Zap } from 'lucide-react';
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 
 export function DownloadPage() {
   return (
@@ -35,19 +36,19 @@ export function DownloadPage() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24 pt-4">
           {[
             {
               title: "macOS",
               icon: <Laptop size={32} />,
               description: "Mendukung Intel & Apple Silicon (M1/M2/M3)",
-              primary: true
+              primary: false
             },
             {
               title: "Windows",
               icon: <Monitor size={32} />,
               description: "Windows 10 atau 11 (64-bit)",
-              primary: false
+              primary: true
             },
             {
               title: "Linux",
@@ -61,12 +62,17 @@ export function DownloadPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 + (i * 0.1) }}
-              className={`p-8 rounded-[2.5rem] border transition-all duration-300 ${
+              className={`p-8 rounded-[2.5rem] border transition-all duration-300 relative ${
                 os.primary 
-                  ? 'bg-card border-primary/50 shadow-2xl shadow-primary/10 scale-105' 
+                  ? 'bg-card border-primary/50 shadow-2xl shadow-primary/10 scale-105 z-10' 
                   : 'bg-card/50 border-border/50 hover:border-primary/30'
               }`}
             >
+              {os.primary && (
+                <span className="absolute -top-3 left-8 bg-primary text-primary-foreground text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                  Direkomendasikan
+                </span>
+              )}
               <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 ${
                 os.primary ? 'bg-primary text-primary-foreground' : 'bg-muted text-foreground'
               }`}>
@@ -128,6 +134,19 @@ export function DownloadPage() {
                </div>
              </div>
           </div>
+        </div>
+
+        <div className="mt-20 text-center bg-card/40 border border-border/50 p-8 md:p-12 rounded-[2.5rem] max-w-3xl mx-auto">
+          <h3 className="text-xl md:text-2xl font-bold mb-3">Butuh panduan pengaturan?</h3>
+          <p className="text-muted-foreground text-sm md:text-base mb-6 max-w-xl mx-auto">
+            Pelajari cara instalasi, penggunaan fitur, serta tips integrasi Dity Engine ke dalam alur kerja coding Anda secara lengkap di dokumentasi kami.
+          </p>
+          <Button variant="default" className="font-bold h-12 rounded-xl flex items-center justify-center gap-2 mx-auto" asChild>
+            <Link to="/docs">
+              Lihat Dokumentasi Lengkap
+              <ArrowRight size={18} />
+            </Link>
+          </Button>
         </div>
       </div>
     </PageLayout>

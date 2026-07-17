@@ -41,7 +41,7 @@ export function CTASection() {
                         
                         <div className="flex flex-col sm:flex-row items-center justify-start gap-4 pt-4">
                             <Button
-                                onClick={() => navigate('/app')}
+                                onClick={() => navigate('/download')}
                                 size="lg"
                                 className="rounded-xl px-10 h-14 text-lg font-bold shadow-xl shadow-primary/20 hover:scale-105 transition-transform w-full sm:w-auto"
                             >
@@ -49,6 +49,7 @@ export function CTASection() {
                                 <ArrowRight className="ml-2 h-5 w-5" />
                             </Button>
                             <Button
+                                onClick={() => navigate('/docs')}
                                 variant="ghost"
                                 size="lg"
                                 className="h-14 rounded-xl px-8 text-lg font-semibold border border-transparent hover:border-border w-full sm:w-auto"
