@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-outline: var(--outline);
+
+  --color-surface: var(--surface);
+  --color-on-surface: var(--on-surface);
+  --color-surface-container-lowest: var(--surface-container-lowest);
+  --color-surface-container-low: var(--surface-container-low);
+  --color-surface-container: var(--surface-container);
+  --color-outline-variant: var(--outline-variant);
+  --color-on-surface-variant: var(--on-surface-variant);
+
+  --font-display-lg: "Inter", sans-serif;
+  --font-headline-lg: "Inter", sans-serif;
+  --font-headline-md: "Inter", sans-serif;
+  --font-body-lg: "Inter", sans-serif;
+  --font-body-md: "Inter", sans-serif;
+  --font-label-md: "Inter", sans-serif;
+  --font-label-sm: "JetBrains Mono", monospace;
+
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  :root {
+    --background: #FFFFFF;
+    --foreground: #020617;
+    --card: #FFFFFF;
+    --card-foreground: #020617;
+    --popover: #FFFFFF;
+    --popover-foreground: #020617;
+    --primary: #3B82F6;
+    --primary-foreground: #FFFFFF;
+    --secondary: #F1F5F9;
+    --secondary-foreground: #0F172A;
+    --muted: #F1F5F9;
+    --muted-foreground: #64748B;
+    --accent: #F1F5F9;
+    --accent-foreground: #0F172A;
+    --destructive: #EF4444;
+    --destructive-foreground: #FFFFFF;
+    --border: #E2E8F0;
+    --input: #E2E8F0;
+    --ring: #3B82F6;
+    --outline: #CBD5E1;
+
+    --surface: #FFFFFF;
+    --on-surface: #1E293B;
+    --surface-container-lowest: #F8FAFC;
+    --surface-container-low: #F1F5F9;
+    --surface-container: #E2E8F0;
+    --outline-variant: #E2E8F0;
+    --on-surface-variant: #64748B;
+  }
+
+  .dark {
+    --background: #020617;
+    --foreground: #F8FAFC;
+    --card: #020617;
+    --card-foreground: #F8FAFC;
+    --popover: #020617;
+    --popover-foreground: #F8FAFC;
+    --primary: #3B82F6;
+    --primary-foreground: #FFFFFF;
+    --secondary: #1E293B;
+    --secondary-foreground: #F8FAFC;
+    --muted: #1E293B;
+    --muted-foreground: #94A3B8;
+    --accent: #1E293B;
+    --accent-foreground: #F8FAFC;
+    --destructive: #EF4444;
+    --destructive-foreground: #FFFFFF;
+    --border: #1E293B;
+    --input: #1E293B;
+    --ring: #3B82F6;
+    --outline: #334155;
+
+    --surface: #0F172A;
+    --on-surface: #F8FAFC;
+    --surface-container-lowest: #020617;
+    --surface-container-low: #0F172A;
+    --surface-container: #1E293B;
+    --outline-variant: #1E293B;
+    --on-surface-variant: #94A3B8;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-primary/20;
+    font-family: var(--font-body-md);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-headline-lg);
+    @apply tracking-tight;
+  }
+}
+
+.prose {
+  @apply text-on-surface-variant;
+}
+
+.prose h1, .prose h2, .prose h3 {
+  @apply text-on-surface font-bold mt-6 mb-4;
+}
+
+.prose p {
+  @apply mb-4;
+}
+
+.prose code {
+  @apply font-label-sm bg-surface-container-low px-1.5 py-0.5 rounded text-primary text-xs;
+}
+
+.input-label {
+  @apply block text-[12px] font-semibold text-on-surface-variant uppercase tracking-wider mb-2;
+}
+
+.text-input {
+  @apply w-full bg-white border border-border rounded-lg px-3 py-2 text-sm text-on-surface placeholder:text-on-surface-variant/50 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all;
+}
+
+.btn-primary {
+  @apply bg-primary text-white px-4 py-2.5 rounded-lg font-semibold text-sm shadow-lg shadow-primary/25 hover:brightness-110 active:scale-[0.98] transition-all;
+}
+
+.btn-secondary {
+  @apply bg-white border border-border text-on-surface px-4 py-2.5 rounded-lg font-semibold text-sm hover:bg-surface-container-low active:scale-[0.98] transition-all;
+}
+
+.btn-dark {
+  @apply bg-secondary text-white px-4 py-2.5 rounded-lg font-semibold text-sm hover:brightness-125 active:scale-[0.98] transition-all;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  height: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(var(--border), 0.1);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  opacity: 0.3;
+  border-radius: 10px;
+}
+
+.text-shadow-glow {
+  text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+}

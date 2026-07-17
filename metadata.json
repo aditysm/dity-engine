@@ -1,0 +1,8 @@
+{
+  "name": "Dity Engine",
+  "description": "Ekosistem Micro-Tools modern untuk efisiensi maksimal developer. Bangun konteks, boilerplate, dan dokumen teknis dengan AI lokal yang tangguh.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
