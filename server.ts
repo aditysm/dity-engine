@@ -6,6 +6,8 @@ import dotenv from "dotenv";
 import helmet from "helmet";
 import rateLimit from "express-rate-limit";
 import compression from "compression";
+import cors from "cors";
+import hpp from "hpp";
 
 dotenv.config();
 
@@ -30,6 +32,8 @@ async function startServer() {
     contentSecurityPolicy: false,
     crossOriginEmbedderPolicy: false,
   }));
+  app.use(cors());
+  app.use(hpp());
 
   // Rate Limiting to prevent DDoS/Brute Force
   const limiter = rateLimit({

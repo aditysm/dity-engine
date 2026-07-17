@@ -5,6 +5,9 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    // Jika deploy ke GitHub Pages (misal: username.github.io/repo-name/), 
+    // tambahkan base: '/repo-name/' di sini.
+    // base: '/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
