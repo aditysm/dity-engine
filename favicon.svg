@@ -1,0 +1,10 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Twin Rounded Stream Logo -->
+  <g fill="#3B82F6">
+    <!-- Component 1 (Bottom Left) -->
+    <path d="M 20,42 V 70 A 10,10 0 0,0 30,80 H 58 V 62 H 38 V 42 Z" />
+             
+    <!-- Component 2 (Top Right) -->
+    <path d="M 80,58 V 30 A 10,10 0 0,0 70,20 H 42 V 38 H 62 V 58 Z" />
+  </g>
+</svg>
